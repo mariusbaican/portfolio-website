@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --bg-accents: #fbfafc;
+
+  --text: #1d1d1f;
+
+  --primary: #962cf2;
+  --primary-accents: #601e9a;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+}
+
+.caveat-text {
+  font-family: var(--font-caveat), cursive;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), sans-serif;
+}
