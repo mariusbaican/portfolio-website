@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow: /assets/
+Sitemap: https://mariusbaican.ro/sitemap.xml

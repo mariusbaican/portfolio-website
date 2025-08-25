@@ -7,7 +7,124 @@
   --text: #1d1d1f;
 
   --primary: #962cf2;
-  --primary-accents: #601e9a;
+  --primary-shadows: rgba(150, 44, 242, 0.15);
+  --primary-gradients: rgba(150, 44, 242, 0);
+  --primary-accents: #6921a8;
+}
+
+.main-header {
+  font-family: var(--font-caveat), cursive;
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  letter-spacing: -1px;
+}
+
+.secondary-header {
+  font-family: var(--font-caveat), cursive;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3rem;
+  letter-spacing: -1px;
+}
+
+/* sm */
+:root {
+  --content-width: min(calc(100vw - 3rem), 37rem);
+  --icon-size: 2rem;
+}
+
+/* md */
+@media (min-width: 768px) {
+  :root {
+    --content-width: min(calc(100vw - 4rem), 44rem);
+  }
+
+  .main-header {
+    font-family: var(--font-caveat), cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: -1px;
+  }
+
+  .secondary-header {
+    font-family: var(--font-caveat), cursive;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    letter-spacing: -1px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  :root {
+    --content-width: min(calc(100vw - 6rem), 58rem);
+    --icon-size: 2.25rem;
+  }
+
+  .main-header {
+    font-family: var(--font-caveat), cursive;
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: -1px;
+  }
+
+  .secondary-header {
+    font-family: var(--font-caveat), cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: -1px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  :root {
+    --content-width: min(calc(100vw - 8rem), 72rem);
+  }
+
+  .main-header {
+    font-family: var(--font-caveat), cursive;
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: -1px;
+  }
+
+  .secondary-header {
+    font-family: var(--font-caveat), cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: -1px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  :root {
+    --content-width: min(calc(100vw - 8rem), 88rem);
+  }
+
+  .main-header {
+    font-family: var(--font-caveat), cursive;
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: -1px;
+  }
+
+  .secondary-header {
+    font-family: var(--font-caveat), cursive;
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: -1px;
+  }
 }
 
 @theme inline {
@@ -15,8 +132,16 @@
   --color-foreground: var(--text);
 }
 
-.caveat-text {
-  font-family: var(--font-caveat), cursive;
+@keyframes pulseSlow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.4;
+  }
 }
 
 body {
