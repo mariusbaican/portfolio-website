@@ -65,7 +65,9 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className={`${inter.variable} ${caveat.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${caveat.variable} antialiased overflow-hidden`}
+      >
         {children}
       </body>
     </html>

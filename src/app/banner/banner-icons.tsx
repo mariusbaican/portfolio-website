@@ -14,7 +14,7 @@ export default function BannerIcons() {
   return (
     <section
       ref={ref}
-      className="absolute bottom-0 left-auto right-auto flex flex-row space-x-[2.25rem] mb-[1rem]"
+      className="absolute bottom-0 left-auto right-auto flex flex-row space-x-[2.25rem] mb-[1rem] z-2"
     >
       <motion.div
         initial={{ opacity: 0, translateY: 40 }}
@@ -35,7 +35,7 @@ export default function BannerIcons() {
           aria-label="My LinkedIn Profile"
           target="_blank"
         >
-          <FaLinkedin className="h-[var(--icon-size)] w-auto aspect-square fill-[var(--primary)] hover:fill-[var(--primary-accents)] hover:translate-y-[-0.5rem] duration-300 transition-transform" />
+          <FaLinkedin className="h-[var(--icon-size)] w-[var(--icon-size)] fill-[var(--primary)] hover:fill-[var(--primary-accents)] hover:translate-y-[-0.5rem] duration-300 transition-transform" />
         </Link>
       </motion.div>
       <motion.div
@@ -57,7 +57,7 @@ export default function BannerIcons() {
           aria-label="My Email Address"
           target="_blank"
         >
-          <MdEmail className="h-[var(--icon-size)] w-auto aspect-square fill-[var(--primary)] hover:fill-[var(--primary-accents)] hover:translate-y-[-0.5rem] duration-300 transition-transform" />
+          <MdEmail className="h-[var(--icon-size)] w-[var(--icon-size)] fill-[var(--primary)] hover:fill-[var(--primary-accents)] hover:translate-y-[-0.5rem] duration-300 transition-transform" />
         </Link>
       </motion.div>
       <motion.div
@@ -79,7 +79,7 @@ export default function BannerIcons() {
           aria-label="My GitHub Profile"
           target="_blank"
         >
-          <FaGithub className="h-[var(--icon-size)] w-auto aspect-square fill-[var(--primary)] hover:fill-[var(--primary-accents)] hover:translate-y-[-0.5rem] duration-300 transition-transform" />
+          <FaGithub className="h-[var(--icon-size)] w-[var(--icon-size)] fill-[var(--primary)] hover:fill-[var(--primary-accents)] hover:translate-y-[-0.5rem] duration-300 transition-transform" />
         </Link>
       </motion.div>
       <motion.div
@@ -97,11 +97,11 @@ export default function BannerIcons() {
         }}
       >
         <Link
-          href="https://mariusbaican.com/assets/resume.pdf"
+          href="/resume.pdf"
           aria-label="My Resume"
           target="_blank"
         >
-          <HiMiniDocumentText className="h-[var(--icon-size)] w-auto aspect-square fill-[var(--primary)] hover:fill-[var(--primary-accents)] hover:translate-y-[-0.5rem] duration-300 transition-transform" />
+          <HiMiniDocumentText className="h-[var(--icon-size)] w-[var(--icon-size)] fill-[var(--primary)] hover:fill-[var(--primary-accents)] hover:translate-y-[-0.5rem] duration-300 transition-transform" />
         </Link>
       </motion.div>
     </section>

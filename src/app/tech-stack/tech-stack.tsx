@@ -14,7 +14,7 @@ import { SiJavascript, SiTypescript } from "react-icons/si";
 
 export default function TechStack() {
   return (
-    <div className="flex flex-row items-center flex-wrap w-full h-auto gap-x-[1.5rem] md:gap-x-[2rem] lg:gap-x-0 justify-center xl:justify-between 2xl:justify-center">
+    <div className="flex flex-row items-center flex-wrap w-full h-auto gap-x-[1.5rem] md:gap-x-[2rem] lg:gap-x-0 justify-center xl:justify-between">
       {techList.map((tech, index) => {
         return (
           <TechPill
@@ -25,7 +25,7 @@ export default function TechStack() {
             className={
               tech.className
                 ? tech.className
-                : "h-[var(--icon-size)] w-auto aspect-square fill-[var(--primary)]"
+                : "h-[var(--icon-size)] w-[var(--icon-size)] fill-[var(--primary)]"
             }
           />
         );
@@ -47,7 +47,7 @@ const techList: { icon: React.ReactNode; name: string; className?: string }[] =
       ),
       name: "C",
       className:
-        "h-[var(--icon-size)] w-auto aspect-square bg-[var(--primary)] fill-[var(--primary)]",
+        "h-[var(--icon-size)] w-[var(--icon-size)] bg-[var(--primary)] fill-[var(--primary)]",
     },
     {
       icon: <FaJava aria-label="Java Icon" />,

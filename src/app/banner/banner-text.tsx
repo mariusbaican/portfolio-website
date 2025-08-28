@@ -12,7 +12,7 @@ export default function BannerText() {
   return (
     <div
       ref={ref}
-      className="h-[80vh] w-full flex flex-col items-center justify-center"
+      className="h-[80vh] w-full flex flex-col items-center justify-center z-2"
     >
       <motion.h1
         initial={{ opacity: 0 }}
@@ -39,7 +39,7 @@ export default function BannerText() {
           }}
           className="flex flex-row space-x-[1rem] items-center"
         >
-          <FaCode className="h-[var(--icon-size)] w-auto aspect-square fill-[var(--primary)]" />
+          <FaCode className="h-[var(--icon-size)] w-[var(--icon-size)] fill-[var(--primary)]" />
           <h2 className="text-[1.25rem]/[1.5rem] lg:text-[1.5rem]/[1.75rem] font-medium">
             Software Engineer
           </h2>
@@ -52,15 +52,15 @@ export default function BannerText() {
               : { opacity: 0, translateX: 60 }
           }
           transition={{
-            visualDuration: 0.3,
-            ease: "easeInOut",
             type: "spring",
             bounce: 0.3,
+            visualDuration: 0.3,
+            ease: "easeInOut",
             delay: 0.4,
           }}
           className="flex flex-row space-x-[1rem] items-center"
         >
-          <FaLocationDot className="h-[var(--icon-size)] w-auto aspect-square fill-[var(--primary)]" />
+          <FaLocationDot className="h-[var(--icon-size)] w-[var(--icon-size)] fill-[var(--primary)]" />
           <h2 className="text-[1.25rem]/[1.5rem] lg:text-[1.5rem]/[1.75rem] font-medium">
             Bucharest, Romania
           </h2>
