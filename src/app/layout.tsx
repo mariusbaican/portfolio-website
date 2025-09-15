@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
-import { Caveat, Inter } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
+import NavBar from "./_components/navbar";
 
-const inter = Inter({
-  variable: "--font-inter",
+const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],
   display: "swap",
-});
-
-const caveat = Caveat({
-  variable: "--font-caveat",
-  subsets: ["latin"],
-  display: "swap",
+  weight: ["200", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "Marius Baican's Portfolio",
-  description: "This is the place where I showcase my work as a developer.",
+  description:
+    "This is the place where I showcase my work as a software engineer.",
   // icons: {
   //   icon: "",
   // },
@@ -66,9 +64,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${caveat.variable} antialiased overflow-hidden`}
+        className={`${beVietnamPro.className} antialiased overflow-hidden bg-[var(--hero-bg)] w-full h-full min-w-[100vw] min-h-[100vh]`}
       >
+        <NavBar />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
