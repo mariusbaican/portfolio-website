@@ -1,4 +1,7 @@
+"use client";
+
 import { CSSProperties } from "react";
+import { motion } from "framer-motion";
 
 export default function Icon({
   path,
@@ -10,7 +13,7 @@ export default function Icon({
   style?: CSSProperties;
 }) {
   return (
-    <div
+    <motion.div
       className={className}
       style={{
         WebkitMask: `url(${path}) no-repeat center / contain`,

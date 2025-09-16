@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="w-[100vw] h-[100vh] flex flex-col items-center justify-center">
+    <section className="w-screen h-screen flex flex-col items-center justify-center">
       <BackGlow
         className="px-[5rem] py-[10rem]"
         glowOpacity={0.1}

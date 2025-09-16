@@ -1,9 +1,16 @@
 import Hero from "./_sections/hero";
+import ThemeHandler from "./_components/theme-handler";
+import NavBar from "./_components/navbar";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center bg-transparent">
+    <ThemeHandler>
+      <NavBar />
       <Hero />
-    </section>
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />
+    </ThemeHandler>
   );
 }

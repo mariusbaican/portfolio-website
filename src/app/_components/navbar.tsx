@@ -1,15 +1,24 @@
+"use client";
+
 import Link from "next/link";
 import Icon from "./icon";
+import { useGlobalContext } from "./context-provider";
 
 export default function NavBar() {
+  const { textColor, primaryColor, accentColor } = useGlobalContext();
+
   return (
     <section className="fixed inset-0 w-full h-fit px-[1.5rem] py-[1.5rem] inline-flex items-center bg-transparent select-none">
       <div className="flex flex-row gap-x-[2rem] mr-auto items-center">
         <Icon
           path="/assets/icons/logo.svg"
-          className="bg-[var(--hero-primary)] w-[3rem] h-auto aspect-1/1"
+          className="w-[3rem] h-auto aspect-1/1"
+          style={{ background: primaryColor }}
         />
-        <span className="text-[1.5rem] text-[var(--hero-text)] font-medium">
+        <span
+          className="text-[1.5rem] font-medium"
+          style={{ color: textColor }}
+        >
           Marius Baican
         </span>
       </div>
@@ -20,7 +29,8 @@ export default function NavBar() {
         >
           <Icon
             path="/assets/icons/linkedin.svg"
-            className="bg-[var(--hero-primary)] w-[2.25rem] h-auto aspect-1/1 hover:bg-[var(--hero-accents)] hover:scale-110 active:scale-90 active:bg-[var(--hero-primary)] transition-all duration-200"
+            className="w-[2.25rem] h-auto aspect-1/1 hover:scale-110 hover:brightness-80 active:brightness-100 active:scale-90 transition-transform duration-200"
+            style={{ background: primaryColor }}
           />
         </Link>
         <Link
@@ -29,7 +39,8 @@ export default function NavBar() {
         >
           <Icon
             path="/assets/icons/github.svg"
-            className="bg-[var(--hero-primary)] w-[2.25rem] h-auto aspect-1/1 hover:bg-[var(--hero-accents)] hover:scale-110 active:scale-90 active:bg-[var(--hero-primary)] transition-all duration-200"
+            className="w-[2.25rem] h-auto aspect-1/1 hover:scale-110 hover:brightness-80 active:brightness-100 active:scale-90 transition-transform duration-200"
+            style={{ background: primaryColor }}
           />
         </Link>
         <Link
@@ -38,7 +49,8 @@ export default function NavBar() {
         >
           <Icon
             path="/assets/icons/email.svg"
-            className="bg-[var(--hero-primary)] w-[2.25rem] h-auto aspect-1/1 hover:bg-[var(--hero-accents)] hover:scale-110 active:scale-90 active:bg-[var(--hero-primary)] transition-all duration-200"
+            className="w-[2.25rem] h-auto aspect-1/1 hover:scale-110 hover:brightness-80 active:brightness-100 active:scale-90 transition-transform duration-200"
+            style={{ background: primaryColor }}
           />
         </Link>
         <Link
@@ -47,7 +59,8 @@ export default function NavBar() {
         >
           <Icon
             path="/assets/icons/resume.svg"
-            className="bg-[var(--hero-primary)] w-[2.25rem] h-auto aspect-1/1 hover:bg-[var(--hero-accents)] hover:scale-110 active:scale-90 active:bg-[var(--hero-primary)] transition-all duration-200"
+            className="w-[2.25rem] h-auto aspect-1/1 hover:scale-110 hover:brightness-80 active:brightness-100 active:scale-90 transition-transform duration-200"
+            style={{ background: primaryColor }}
           />
         </Link>
       </div>

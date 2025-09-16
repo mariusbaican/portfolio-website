@@ -6,34 +6,34 @@
   /* Sections */
 
   /* Hero */
-  --hero-bg: oklch(14.219% 0.05835 29.223);
-  --hero-text: oklch(93.663% 0.01194 29.17);
-  --hero-primary: oklch(48.976% 0.20051 29.17);
-  --hero-accents: oklch(30.976% 0.20051 29.17);
+  --hero-bg: #1c0000;
+  --hero-text: #f2e7e5;
+  --hero-primary: #b70101;
+  --hero-accents: #770000;
 
   /* About Me */
-  --about-bg: oklch(16.351% 0.23416 309.844);
-  --about-text: oklch(93.663% 0.01194 309.884);
-  --about-primary: oklch(46.351% 0.23416 309.844);
-  --about-accents: oklch(26.351% 0.23416 309.844);
+  --about-bg: #2c0056;
+  --about-text: #ece8f0;
+  --about-primary: #8001b7;
+  --about-accents: #460075;
 
   /* Projects */
-  --projects-bg: oklch(5.512% 0.24212 265.452);
-  --projects-text: oklch(93.663% 0.01194 265.452);
-  --projects-primary: oklch(35.512% 0.24212 265.452);
-  --projects-accents: oklch(15.512% 0.24212 265.452);
+  --projects-bg: #1a0052;
+  --projects-text: #e6eaf2;
+  --projects-primary: #0a01b7;
+  --projects-accents: #1a0073;
 
   /* Toolkit */
-  --toolkit-bg: oklch(38.32% 0.1161 201.394);
-  --toolkit-text: oklch(93.663% 0.01194 201.394);
-  --toolkit-primary: oklch(68.32% 0.1161 201.394);
-  --toolkit-accents: oklch(48.32% 0.1161 201.394);
+  --toolkit-bg: #00535d;
+  --toolkit-text: #e1eded;
+  --toolkit-primary: #01aeb7;
+  --toolkit-accents: #00707a;
 
   /* Experience */
-  --experience-bg: oklch(37.635% 0.22824 142.212);
-  --experience-text: oklch(93.663% 0.01194 142.212);
-  --experience-primary: oklch(67.635% 0.22824 142.212);
-  --experience-accents: oklch(47.635% 0.22824 142.212);
+  --experience-bg: #005900;
+  --experience-text: #e6ece5;
+  --experience-primary: #10b701;
+  --experience-accents: #007700;
 }
 
 .main-header {

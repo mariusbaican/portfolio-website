@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import NavBar from "./_components/navbar";
+import { ContextProvider } from "./_components/context-provider";
+import ThemeHandler from "./_components/theme-handler";
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],
@@ -63,11 +65,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body
-        className={`${beVietnamPro.className} antialiased overflow-hidden bg-[var(--hero-bg)] w-full h-full min-w-[100vw] min-h-[100vh]`}
-      >
-        <NavBar />
-        {children}
+      <body className={`${beVietnamPro.className} antialiased overflow-hidden`}>
+        <ContextProvider>{children}</ContextProvider>
         <Analytics />
         <SpeedInsights />
       </body>
