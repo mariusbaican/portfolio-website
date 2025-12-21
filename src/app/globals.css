@@ -36,25 +36,32 @@
   --experience-accents: #007700;
 }
 
-.main-header {
-  font-family: var(--font-caveat), cursive;
-  font-weight: bold;
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-  letter-spacing: -1px;
+html,
+body,
+#__next {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
-.section-header {
-  font-family: var(--font-caveat), cursive;
-  font-weight: bold;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#__next::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 /* sm */
 :root {
   --content-width: min(calc(100vw - 3rem), 37rem);
-  --icon-size: 2rem;
+}
+
+p,
+li {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 /* md */
@@ -63,19 +70,11 @@
     --content-width: min(calc(100vw - 4rem), 44rem);
   }
 
-  .main-header {
-    font-family: var(--font-caveat), cursive;
-    font-weight: bold;
-    font-size: 4rem;
-    line-height: 4rem;
-    letter-spacing: -1px;
-  }
-
-  .section-header {
-    font-family: var(--font-caveat), cursive;
-    font-weight: bold;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+  p,
+  li {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -83,22 +82,13 @@
 @media (min-width: 1024px) {
   :root {
     --content-width: min(calc(100vw - 6rem), 58rem);
-    --icon-size: 2.25rem;
   }
 
-  .main-header {
-    font-family: var(--font-caveat), cursive;
-    font-weight: bold;
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    letter-spacing: -1px;
-  }
-
-  .section-header {
-    font-family: var(--font-caveat), cursive;
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 3rem;
+  p,
+  li {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -108,19 +98,11 @@
     --content-width: min(calc(100vw - 8rem), 72rem);
   }
 
-  .main-header {
-    font-family: var(--font-caveat), cursive;
-    font-weight: bold;
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    letter-spacing: -1px;
-  }
-
-  .section-header {
-    font-family: var(--font-caveat), cursive;
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 3rem;
+  p,
+  li {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -130,19 +112,11 @@
     --content-width: min(calc(100vw - 8rem), 88rem);
   }
 
-  .main-header {
-    font-family: var(--font-caveat), cursive;
-    font-weight: bold;
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    letter-spacing: -1px;
-  }
-
-  .section-header {
-    font-family: var(--font-caveat), cursive;
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 3rem;
+  p,
+  li {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 

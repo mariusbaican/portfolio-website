@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 type GlobalState = {
   bgColor: string;
@@ -9,17 +9,19 @@ type GlobalState = {
   setTextColor: (textColor: string) => void;
   primaryColor: string;
   setPrimaryColor: (primaryColor: string) => void;
-  accentColor: string;
-  setAccentColor: (accentColor: string) => void;
 };
 
 const GlobalContext = createContext<GlobalState | undefined>(undefined);
 
 export function ContextProvider({ children }: { children: React.ReactNode }) {
   const [bgColor, setBgColor] = useState("#1c0000");
-  const [textColor, setTextColor] = useState("#1c0000");
-  const [primaryColor, setPrimaryColor] = useState("#1c0000");
-  const [accentColor, setAccentColor] = useState("#1c0000");
+  const [textColor, setTextColor] = useState("#f2e7e5");
+  const [primaryColor, setPrimaryColor] = useState("#b70101");
+
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <GlobalContext.Provider
@@ -30,8 +32,6 @@ export function ContextProvider({ children }: { children: React.ReactNode }) {
         setTextColor,
         primaryColor,
         setPrimaryColor,
-        accentColor,
-        setAccentColor,
       }}
     >
       {children}

@@ -1,11 +1,9 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import "./globals.css";
-import NavBar from "./_components/navbar";
 import { ContextProvider } from "./_components/context-provider";
-import ThemeHandler from "./_components/theme-handler";
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],

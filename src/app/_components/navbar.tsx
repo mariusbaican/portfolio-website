@@ -5,7 +5,7 @@ import Icon from "./icon";
 import { useGlobalContext } from "./context-provider";
 
 export default function NavBar() {
-  const { textColor, primaryColor, accentColor } = useGlobalContext();
+  const { textColor, primaryColor } = useGlobalContext();
 
   return (
     <section className="fixed inset-0 w-full h-fit px-[1.5rem] py-[1.5rem] inline-flex items-center bg-transparent select-none">

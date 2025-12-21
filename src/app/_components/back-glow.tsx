@@ -1,4 +1,7 @@
+"use client";
+
 import { CSSProperties } from "react";
+import { motion } from "framer-motion";
 
 export default function BackGlow({
   children,
@@ -18,8 +21,8 @@ export default function BackGlow({
       className={`relative w-fit h-fit ${className}`}
       style={{ ...style }}
     >
-      <div
-        className={`absolute inset-0 z-[-1] w-full h-full bg-radial from-[#ffffff] to-[${bgColor}] to-70%`}
+      <motion.div
+        className={`absolute inset-0 w-full h-full bg-radial from-[#ffffff] to-[${bgColor}] to-65%`}
         style={{ opacity: glowOpacity }}
       />
       {children}

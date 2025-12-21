@@ -11,29 +11,28 @@ export default function ThemeHandler({
 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const { setBgColor, setTextColor, setPrimaryColor, setAccentColor } =
-    useGlobalContext();
+  const { setBgColor, setTextColor, setPrimaryColor } = useGlobalContext();
   const bgColor = useTransform(
     scrollYProgress,
-    [0, 0.15, 0.2, 0.35, 0.4, 0.55, 0.6, 0.75, 0.8, 1],
+    [0, 0.1, 0.2, 0.35, 0.45, 0.6, 0.7, 0.85, 0.95, 1],
     [
       "#1c0000",
       "#1c0000",
-      "#2c0056",
-      "#2c0056",
-      "#1a0052",
-      "#1a0052",
-      "#00535d",
-      "#00535d",
-      "#005900",
-      "#005900",
+      "#17001C",
+      "#17001C",
+      "#05001C",
+      "#05001C",
+      "#001B1C",
+      "#001B1C",
+      "#001C09",
+      "#001C09",
     ],
     { ease: easeIn }
   );
 
   const textColor = useTransform(
     scrollYProgress,
-    [0, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 1],
+    [0, 0.1, 0.2, 0.35, 0.45, 0.6, 0.7, 0.85, 0.95, 1],
     [
       "#f2e7e5",
       "#f2e7e5",
@@ -51,7 +50,7 @@ export default function ThemeHandler({
 
   const primaryColor = useTransform(
     scrollYProgress,
-    [0, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 1],
+    [0, 0.1, 0.2, 0.35, 0.45, 0.6, 0.7, 0.85, 0.95, 1],
     [
       "#b70101",
       "#b70101",
@@ -63,24 +62,6 @@ export default function ThemeHandler({
       "#01aeb7",
       "#10b701",
       "#10b701",
-    ],
-    { ease: easeIn }
-  );
-
-  const accentColor = useTransform(
-    scrollYProgress,
-    [0, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 1],
-    [
-      "#1c0000",
-      "#1c0000",
-      "#2c0056",
-      "#2c0056",
-      "#1a0052",
-      "#1a0052",
-      "#00535d",
-      "#00535d",
-      "#005900",
-      "#005900",
     ],
     { ease: easeIn }
   );
@@ -94,39 +75,32 @@ export default function ThemeHandler({
     const unsubscribePrimary = primaryColor.on("change", (latest) =>
       setPrimaryColor(latest)
     );
-    const unsubscribeAccent = accentColor.on("change", (latest) =>
-      setAccentColor(latest)
-    );
 
     // Set initial values
     setBgColor(bgColor.get());
     setTextColor(textColor.get());
     setPrimaryColor(primaryColor.get());
-    setAccentColor(accentColor.get());
 
     // Cleanup subscriptions
     return () => {
       unsubscribeBg();
       unsubscribeText();
       unsubscribePrimary();
-      unsubscribeAccent();
     };
   }, [
     setBgColor,
     setTextColor,
     setPrimaryColor,
-    setAccentColor,
     bgColor,
     textColor,
     primaryColor,
-    accentColor,
     scrollYProgress,
   ]);
 
   return (
     <motion.section
       ref={ref}
-      className="flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center z-[-10000]"
       style={{ background: bgColor }}
     >
       {children}
