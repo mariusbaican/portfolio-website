@@ -15,20 +15,21 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Marius Baican's Portfolio",
-  description: "This is the place where I showcase my work as a developer.",
+  title: "Marius Baican - Software Engineer",
+  description:
+    "This is the place where I showcase my experience as a software engineer.",
   // icons: {
   //   icon: "",
   // },
   // openGraph: {
   //   url: "https://mariusbaican.com/",
-  //   siteName: "Marius Baican's Portfolio",
+  //   siteName: "Marius Baican - Software Engineer",
   //   images: [
   //     {
   //       url: "", // This needs to be an absolute path
   //       width: 256,
   //       height: 256,
-  //       alt: "Marius Baican Icon",
+  //       alt: "Portfolio Icon",
   //     },
   //   ],
   //   type: "website",
@@ -37,6 +38,26 @@ export const metadata: Metadata = {
   //   card: "summary_large_image",
   //   images: "", // This needs to be an absolute path
   // },
+};
+
+export const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://mariusbaican.com/#person",
+  name: "Marius Baican",
+  url: "https://mariusbaican.com",
+  about:
+    "This is the place where I showcase my experience as a software engineer.",
+  sameAs: [
+    "https://www.linkedin.com/in/marius-baican",
+    "https://github.com/mariusbaican",
+  ],
+  jobTitle: "Software Engineer",
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "POLITEHNICA University of Bucharest",
+    url: "https://upb.ro",
+  },
 };
 
 export default function RootLayout({
@@ -63,6 +84,20 @@ export default function RootLayout({
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
+        />
+        <link
+          rel="canonical"
+          href="https://mariusbaican.com"
+        />
+        <meta
+          name="description"
+          content="This is the place where I showcase my experience as a software engineer."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
         />
       </head>
       <body
